@@ -1,6 +1,11 @@
 class CarsController < ApplicationController
   before_action :set_car, only: %i[ show edit update destroy ]
 
+  def supercars
+    @cars = Car.all
+    render inline: "Hello"
+  end
+
   # GET /cars or /cars.json
   def index
     @cars = Car.all
