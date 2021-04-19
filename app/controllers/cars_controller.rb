@@ -3,7 +3,7 @@ class CarsController < ApplicationController
 
   def supercars
     @cars = Car.all
-    render inline: "Hello"
+    redirect_to new_car_path
   end
 
   # GET /cars or /cars.json
